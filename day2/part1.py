@@ -8,7 +8,6 @@ with open('input.txt') as f:
         for s in [list(map(lambda x: tuple(x[1:].removesuffix('\n').split(' ')), s.split(','))) for s in line[line.find(':')+1:].split(';')]:
             for count, color in s:
                 if goal[color] < int(count):
-                    print(color, count)
                     break
             else:
                 continue
